@@ -3,8 +3,8 @@
 /*
 PALETA DE CORES:
 
-AZUL: #2D7EB7
-MARROM: #473111
+AZUL CLARO: ##008EB2
+AZUL ESCURO: #1A2E33
 
 */
 
@@ -18,7 +18,7 @@ MARROM: #473111
 }
 
 body, html{
-    background-color: #2D7EB7;
+    background-color: #008EB2;
     height: 100vh;
     width: 100vw;
 }
@@ -36,6 +36,9 @@ section#login{
     transform: translate(-50%, -50%);
     overflow: hidden;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
+    
+    transition: width .3s, height .3s;
+    transition-timing-function: ease;
 
     background-color: white;
     width: 250px;
@@ -45,7 +48,7 @@ section#login{
 
 section#login > div#imagem{
     display: block;
-    background: #2D7EB7 url(../imagens/tela-login.jpg) no-repeat; 
+    background: #008EB2 url(../imagens/tela-login.jpg) no-repeat; 
     background-size: cover;
     background-position: center center;
     height: 200px;
