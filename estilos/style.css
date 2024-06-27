@@ -3,7 +3,7 @@
 /*
 PALETA DE CORES:
 
-AZUL CLARO: ##008EB2
+AZUL CLARO: #008EB2
 AZUL ESCURO: #1A2E33
 
 */
@@ -33,17 +33,17 @@ section#login{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
     
-    transition: width .3s, height .3s;
-    transition-timing-function: ease;
-
     background-color: white;
     width: 250px;
     height: 515px;
     border-radius: 20px;
+
+    transform: translate(-50%, -50%);
+    transition: width .3s, height .3s;
+    transition-timing-function: ease;
 }
 
 section#login > div#imagem{
@@ -74,17 +74,46 @@ div#formulario > p{
 }
 
 form > div.campo{
-    background-color: #3b6772;
+    background-color: #1A2E33;
+    border: 2px solid #1A2E33;
     display: block;
     width: 100%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px;
 }
 
 div.campo > label{
     display: none;
 }
+
+div.campo > span{
+    color: white;
+    font-size: 2em;
+    height: 40px;
+    padding: 5px;
+}
+
+div.campo > input{
+    background-color: #008eb2bd;
+    font-size: 1em;
+    width: calc(100% - 47px); /* PARA PERSONALIZAR O TAMANHO DAS CAIXAS INPUT */
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-13px);
+}
+
+div.campo > input:focus-within{ /* PARA DAR FOCO NA CAIXA */
+    background-color: white;
+    border: none;
+}
+
+div.campo > input::placeholder { /* PARA MUDAR A COR DO PLACEHOLDER */
+    color: #17282c; 
+  }
+
 
 form > input[type=submit]{
     display: block;
@@ -119,8 +148,9 @@ form > a.botao{
 
 form > a.botao:hover{
     background-color: #047b99;
+    color: #8ae8ff;
 }
 
-form > a.botao > i{
+form > a.botao > span{
     font-size: 0.8em;
 }
